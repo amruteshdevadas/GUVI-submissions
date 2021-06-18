@@ -1,0 +1,18 @@
+var xhr = new XMLHttpRequest();
+             xhr.open("GET", "https://restcountries.eu/rest/v2/all");
+            var data = [];
+             xhr.onload = function () {
+                var json = this.response;
+                data = JSON.parse(json)
+                for(i=0;i<data.length;i++)
+                {
+      console.log(`Name of the country is ${data[i].name}`);
+      console.log(`Population of country is ${data[i].population}`);
+      console.log(data[i].region);
+      console.log(data[i].subregion);
+      console.log(`Capital city is ${data[i].capital}`);
+      console.log(`Flag is ${data[i].flag}`);
+                }
+             };
+             xhr.send()
+     
