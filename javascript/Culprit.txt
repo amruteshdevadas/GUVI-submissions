@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<body>
+ <script>
+ alert( “I’m JavaScript!"); //double or single quotes at both sides 
+ </script>
+</body>
+</html>
+----------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<body>
+ <script src=”scripts.js”></script> //file name should be the same
+</body>
+</html>
+----------------------------------------------------------------------------------------------
+alert("I'm JavaScript!");
+alert('Hello') // this line is not having semicolon
+alert(`Wor
+ ld`)
+alert(3 +
+1
++ 2); // this is multiple line code and its working 
+
+// its working because javascript doesnt need semicolons at the 
+//end of each line but there are some consequences where we are 
+//supposed to use semicolons.
+
+------------------------------------------------------------------------------------------------------
+let admin=9, fname=10.5; 
+fname = "Guvi";
+lname = "geek"
+admin = fname+" "+lname; // space should be given to get the required output
+
+------------------------------------------------------------------------------------------------------------
+let fname=10.5; 
+fname = "Guvi";
+lname = "geek"
+let name = fname+lname;
+alert( `hello ${name}` ); //use ` instead of '
+
+---------------------------------------------------------------------------------------------------------------------------
+let a = prompt("First number?");
+let b = prompt("Second number?");
+alert((+a) + (+b)); // string should be converted to number using '+' operator
+---------------------------------------------------------------------------------------------------------------------------------
+var a = 2 > 12; // when comparing numbers single or double quotes should not be used
+//Don't touch below this
+if (a) {
+  console.log("Code is Blasted")
+}
+else
+{
+  console.log("Diffused") 
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+let a = parseInt(prompt("Enter a number?")); //Convert string into number
+//Don't modify anycode
+if (a) 
+{
+ console.log( 'OMG it works for any number inc 0' );
+}
+else
+{
+ console.log( "Success" );
+--------------------------------------------------------------------------------------------------------------------------------------
+let value = parseInt(prompt('How many runs you scored in this ball')); //Convert string into number
+if (value === 4) {
+      console.log("You hit a Four");
+} else if (value === 6) {
+      console.log("You hit a Six");
+} else {
+      console.log("I couldn't figure out");
+}
+
+--------------------------------------------------------------------------------------------------------------
+let login = 'Employee';
+let message = (login == 'Employee') ? console.log(login) : (login == 'Director') ? 'Greetings' :(login == '') ? 'No login' :'';
+//instaed of message login should be printeed
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+let message;     //message variable should not declared again and again 
+if (null || 2 || undefined )
+{
+  message = "welcome boss";
+}
+else
+{
+ message = "Go away";
+}
+  console.log(message);
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+let message;
+let lock = 0;  // if condition should be false to welcome the boss
+//Dont change any code below this 
+if (null || lock || undefined )
+{
+  message = "Go away";
+}
+else
+{
+ message = "welcome";
+}
+  console.log(message);
+
+ ---------------------------------------------------------------------------------------------------------------------------------------------------------
+let message;
+let lock = 0; // if condition should be false to welcome the boss
+//Dont change any code below this
+if (lock && " " || undefined )
+{
+  message = "Go away";
+}
+else
+{
+ message = "welcome";
+}
+console.log(message);
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+let i = 3;
+while (i) 
+{
+    console.log( i-- ); // use post decremnt instead of pre decrement
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+for(let i=1;i<=10;i++) //using a for loop to print instead writing reduntant code 
+{
+    console.log(i)
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+for (let num = 2; num <= 20; num += 1) 
+{
+    if(num% 2== 0)
+    console.log(num)
+  }
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+let gifts = ["teddy bear", "drone", "doll"];
+for (let i = 0; i < 3; i++) 
+{
+console.log(`Wrapped ${gifts[i]} and added a bow!`); 
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+let countdown = 100;
+while (countdown >= 0)  // to trigger bomb the countdown should reach 0
+{
+    countdown--;
+    if(countdown == 0)
+    {
+     console.log("bomb triggered");
+    }
+  }
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+var lemein = '0';  // since the string '0' is true 
+var lemeout = 0;
+var msg = '';
+if (lemein) 
+{
+ msg += 'hi';
+}
+ if (lemeout) 
+{
+ msg += 'Hello';
+}
+
+console.log(msg);
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+var lemein = '0';
+var lemeout = 0;
+var msg = '';
+if (lemein) 
+{
+ msg += 'hi';
+}
+ if (lemeout) 
+{
+ msg += 'Hello';
+}
+console.log(msg);
+
+//output is hi  and because if(limeout) becomes true
+
+ ________________________________________________________________________
+var numsArr = [1,2,3,4,5,6,7,8,9,10,11];
+var new_string = '';
+ 
+for (var i = 0; i < 11; i++)  //i traverses from i=0 to  10 and i should be incremented 
+{ 
+ new_string += numsArr[i] 
+}
+console.log(new_string);
+
+----------------------------------------------------------------------------------------------------------------------------
+var numsArr = [1,2,3,4,5,6,7,8,9,10,11];
+var new_string = []; // instead of string use array and use use push function 
+ 
+for (var i = 0; i < 11; i++) 
+{ 
+ new_string.push(numsArr[i])
+}
+console.log(new_string.join(","));
+--------------------------------------------------------------------------------------------------------------------------------------
+var new_string = '';
+for (var i = 11; i > 0; i--) 
+{
+    if(i==1)
+    {
+        new_string +=i
+    }
+    else
+    {
+        new_string +=i + " "
+    }
+}
+console.log(new_string);
+
+----------------------------------------------------------------------------------------------------------------------------------------
+var numsArr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+for (var i = 0; i <=10; i++) 
+{
+    if(numsArr[i] % 2 == 0 )
+    {
+    numsArr[i] = "even"
+    }
+}
+   console.log(numsArr);
+
+----------------------------------------------------------------------------------------------------------------------------------
+var numsArr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+for (var i = 0; i <=10; i++) 
+{
+    if(i %2 == 0 )
+    {
+    numsArr[i] = "even"
+    }
+   }
+   console.log(numsArr);
+
+----------------------------------------------------------------------------------------------------------------------------------
+var numsArr = [1,2,3,4,5,6,7,8,9,10,11];
+var sum=0;
+for (var i = 0; i <=10; i++) 
+{
+  sum += numsArr[i]
+}
+
+console.log(sum);
+
+----------------------------------------------------------------------------------------------------------------------------------
+var numsArr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+var sum=0;
+for (var i = 0; i <10; i++) 
+{
+ if(numsArr[i] %2 == 0)
+ {
+ sum += numsArr[i]
+ }
+}
+console.log(sum);
+
+--------------------------------------------------------------------------------------------------------------------------------------
+var numsArr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+var sum=100;
+for (var i = 0; i <=10; i++) 
+{
+ if(numsArr[i]%2==0)
+ {
+ sum += numsArr[i]
+ }
+ else
+ {
+ sum -= numsArr[i]
+ }
+}
+console.log(sum);
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+var numsArr = [[1,2,3,4,5],[6,7,8,9,10,11]];
+for (let i=0; i<numsArr.length;i++) 
+{
+ console.log(numsArr[i]);
+}
+------------------------------------------------------------------------------------------------------------------------------------
+var numsArr = [[1, 2, 3, 4, 5],[ 6, 7, 8, 9, 10, 11]];
+var str_all='';
+for (var i = 0; i < numsArr.length; i++) 
+{
+ var inner_array = numsArr[i];
+ for(var j=0 ; j<inner_array.length ;j++ )
+    {
+        str_all += inner_array[j]
+    }
+}
+console.log(str_all);
+
+------------------------------------------------------------------------------------------------------------------------------------
+var numsArr = [[1, 2, 3, 4, 5],[ 6, 7, 8, 9, 10, 11]];
+var str_all=0;for (var i = 0; i < numsArr.length; i++) 
+{
+ var inner_array = numsArr[i];
+ for(var j = 0 ; j < inner_array.length;j++ )
+      if(inner_array[j] %2 == 1 )
+      {
+       inner_array[j] = 'even'
+       }
+}
+console.log(numsArr);
+
+----------------------------------------------------------------------------------------------------------------------------------------
+var numsArr = [[1, 2, 3, 4, 5],[ 6, 7, 8, 9, 10, 11]];
+var str_all='';
+for (var i = numsArr.length-1; i>=0; i--) 
+{
+ var inner_array = numsArr[i];
+ for(var j = inner_array.length -1 ; j >=0 ;j-- )
+ if(j==0 && i==0)
+ {
+    str_all +=inner_array[j]
+ }  
+ else{
+ str_all +=inner_array[j]+ " "
+ }
+}
+console.log(str_all);
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+var numsArr = [[1, 2, 3, 4, 5],[ 6, 7, 8, 9, 10, 11]];
+var sum_odd=0;
+var sum_even=0;
+for (var i = 0; i< numsArr.length; i++)
+ {
+ var inner_array = numsArr[i];
+ for(var j = 0 ; j < inner_array.length;j++ )
+ {
+ if(inner_array[j] %2 !=0)
+ {
+ sum_odd += parseInt(inner_array[j])
+ }
+ else
+ {
+ sum_even += parseInt(inner_array[j])
+ }
+}
+}
+console.log(sum_odd);
+console.log(sum_even);
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+aa = (f,s,t) => {
+    if(f>s &&f>t){
+    console.log(f)}
+    else if(s>f && s>t)
+    {
+    console.log(s)
+    }
+    else
+    {
+    console.log(t)
+    }
+   }
+   aa(1,2,3);
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+let n = [1,2,3];
+console.log(add(n));
+function add(n)
+{
+let sum = 0;
+for(var i=0;i<n.length;i++){
+ sum+=n[i]
+ }
+ return sum;
+}
+
+------------------------------------------------------------------------------------------------------
+const arr = [9,8,5,6,4,3,2,1];
+
+(function() 
+{
+    let sum = 0;
+    for (var i = 0; i < arr.length; i++)
+    {
+    sum += arr[i];
+    }
+    console.log(sum);
+    return sum;
+   })();
+----------------------------------------------------------------------------------------------------------------
+
+var arr = ['guvi', 'geek', 'zen', 'fullstack'];
+var ano = function(arro) {
+    for (var i = 0; i <= arro.length; i++) 
+    {
+    console.log(arro[i][0].toUpperCase() + arro[i].substr(1));
+    }
+   }
+ano(arr);
+
+----------------------------------------------------------------------------------------------------------------------------------
+const num = [10, 20, 30, 40,50,60,70,80,90,100] 
+const sum1 = (a, b) => a + b
+var  sum = num.reduce(sum1)
+console.log(sum);
+
+------------------------------------------------------------------------------------------------------------
+var arr = [1, 2, 3, 6, 8, 6, 1, 9, 10, 12, 13];
+var k = 3;
+k = arr.length % k;
+(function() {
+ out= {};
+ out = arr.slice(k + 1, arr.length);
+ var count = out.length;
+ for (var i = 0; i < k + 1; i++) 
+ {
+ out[count] = arr[i];
+ count += 1;
+ }
+ console.log(out);})();
+
+------------------------------------------------------------------------------------------------------------------------------------
+var arr = ['guvi', 'geek', 'zen', 'fullstack'];
+(function() {
+    for (var i = 0; i < arr.length; i++) {
+    console.log(arr[i][0].toUpperCase() + arr[i].substr(1));
+    }
+   })();
+----------------------------------------------------------------------------------------------------------------
+var arr = [1, 2, 3, 5, 7, 79, 7, 2, 6, 9, 4];
+(function() {
+    for (var i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 == 1) {
+    console.log(arr[i]);
+    }}
+   })();
+
+-------------------------------------------------------------------------------------------------------------------------------
+(function(str){
+    str1 = str.split('').reverse().join('');
+    console.log(str1); 
+   })('abcd')
+
+------------------------------------------------------------------------------------------------------------------
+var res = function(arr){
+  newArr = [];
+  for(var i=0; i < arr.length; i++)
+{
+  if(newArr.indexOf(arr[i]) == -1) 
+  {
+    newArr.push(arr[i]);
+  } 
+}
+  console.log(newArr)
+ }
+
+ res(['guvi','geek','guvi','duplicate','geeK'])
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+aa = data=>
+{
+  var a=data.split("");
+  var l='';
+ for(i=0;i<a.length-1;i++)
+ {
+  var s=a[i+1]
+  var b=a[i]
+  l+=s
+  l+=b
+  i=i+1
+ }
+ if((a.length%2)!=0){
+  l+=a[a.length-1]
+ }
+ console.log(l);
+ }
+ 
+ aa('1234');
+---------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
