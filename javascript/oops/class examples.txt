@@ -1,0 +1,121 @@
+
+class Circle
+{
+  constructor(radius)
+  {
+    this.radius = radius;
+  }
+  getArea()
+  {
+    console.log((Math.PI*this.radius*this.radius).toFixed(2))
+  }
+  getCircumference()
+  {
+    console.log((2*Math.PI*this.radius).toFixed(2))
+  }
+}
+
+let circle1 = new Circle(5);
+circle1.getArea();
+circle1.getCircumference();
+
+------------------------------------------------------------------------------------------
+class person
+{
+  constructor(fName,lName,age,gender,bGroup)
+  {
+    this.fName = fName;
+    this.gender = gender;
+    this.lName = lName;
+    this.age = age;
+    this.bGroup =bGroup;
+  }
+getfullname()
+{
+  console.log(`Full name is ${this.fName +" " +this.lName}`)
+}
+getage()
+{
+  console.log(`Age of the person is ${this.age}`)
+}
+getgender()
+{
+  console.log(`Gender of the person is ${this.gender}`)
+}
+getbGroup()
+{
+  console.log(`Blood Group of the person ${this.bGroup}`)
+}
+}
+
+let person1 = new person('Amrutesh','Devadas',24,'Male','AB+ve')
+person1.getfullname();
+person1.getage();
+person1.getbGroup();
+person1.getgender();
+-------------------------------------------------------------------------------------------------------------------
+class Movie {
+  constructor(movieName,studioName,rating = 'PG')
+  {
+    this.movieName = movieName;
+    this.studioName= studioName;
+    this.rating = rating;
+  }
+}
+function getPG(movie_array)
+{
+    let movies = []
+    for(i=0;i<movie_array.length;i++)
+    if(movie_array[i].rating == 'PG')
+    {
+      movies.push(movie_array[i].movieName);
+    }
+  console.log(movies)
+}
+
+var movie1 = new Movie('Casino Royale','Casino Royale','PG13')
+var movie2 = new Movie('ACD','RTY','PG')
+var movie3 = new Movie('ACB','FGH','PG');
+var a =[movie1,movie2,movie3]
+getPG(a)
+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+class calculatePrice
+{
+  constructor(km,type,discount=10)
+  {
+    this.km = km;
+    this.discount = discount;
+    this.type =type;
+  }
+ getprice()
+{
+  var perkmPrice =0;
+  var amount = 0;
+  switch (this.type) 
+  {
+      case this.type:'Auto'
+        perkmPrice = 10;
+        continue value;
+        amount = (perkmPrice*this.km)-((perkmPrice*this.km)*(this.discount/100))
+        console.log(amount)
+        break;
+      case this.type:'Car'
+        perkmPrice = 15;
+        amount = (perkmPrice*this.km)-((perkmPrice*this.km)*(this.discount/100))
+        console.log(amount)
+        break;
+      case this.type:'Mini'
+        perkmPrice = 17;
+        amount = (perkmPrice*this.km)-((perkmPrice*this.km)*(this.discount/100))
+        console.log(amount)
+        break;
+  }
+}
+}
+
+var uber1 = new calculatePrice(30,'Mini',20)
+uber1.getprice();
+var uber2 = new calculatePrice(20,'Auto',5)
+uber2.getprice();
