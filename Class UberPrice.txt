@@ -1,0 +1,38 @@
+class calculatePrice
+{
+  constructor(km,type,discount=10)
+  {
+    this.km = km;
+    this.discount = discount;
+    this.type =type;
+  }
+ getprice()
+{
+  var perkmPrice =0;
+  var amount = 0;
+  switch (this.type) 
+  {
+      case this.type:'Auto'
+        perkmPrice = 10;
+        continue value;
+        amount = (perkmPrice*this.km)-((perkmPrice*this.km)*(this.discount/100))
+        console.log(amount)
+        break;
+      case this.type:'Car'
+        perkmPrice = 15;
+        amount = (perkmPrice*this.km)-((perkmPrice*this.km)*(this.discount/100))
+        console.log(amount)
+        break;
+      case this.type:'Mini'
+        perkmPrice = 17;
+        amount = (perkmPrice*this.km)-((perkmPrice*this.km)*(this.discount/100))
+        console.log(amount)
+        break;
+  }
+}
+}
+
+var uber1 = new calculatePrice(30,'Mini',20)
+uber1.getprice();
+var uber2 = new calculatePrice(20,'Auto',5)
+uber2.getprice();
