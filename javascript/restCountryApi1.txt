@@ -1,0 +1,55 @@
+// 1) Solving problems using array functions on rest countries data. 
+// - Get all the countries from Asia continent /region using Filter function
+// - Get all the countries with a population of less than 2 lakhs using Filter function
+// - Print the following details name, capital, flag using forEach function 
+// - Print the total population of countries using reduce function 
+// - Print the country which use US Dollars as currency.
+
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://restcountries.eu/rest/v2/all");
+xhr.onload = function () 
+{
+   var json = this.response;
+  var data = JSON.parse(json)
+console.log("Countries with region Asia")
+      var asia = data.filter(function(element)
+      {
+         if(element.region == 'Asia')
+         {
+            console.log(element.name)
+         }
+      })
+     
+
+console.log("=====================================================================================================")
+console.log("Countries with population less 2 lac")
+      var less2Lac = data.filter(function(element)
+      {
+         if(element.population <= 200000)
+         {
+            console.log(element.name)
+         }
+      })
+   console.log('===================================================================================================')
+    console.log("Countries using Currency US Dollars")
+      var curr = data.filter(function(element)
+      {
+         if(element.currencies[0].name == 'United States dollar')
+         {
+            console.log(element.name);
+         }
+      })
+      console.log('===================================================================================================')
+      console.log("Name of all Countries with their capital ")
+          data.forEach(element => {
+            console.log(`Name of country ${element.name} and Capital City ${element.capital}`);
+            
+      });   
+      
+     var num =[];
+  data.forEach(element => { num. push(element.population) });
+      var total = num.reduce(function (a,c) { return a +c});
+      console.log(total)
+
+};
+xhr.send()
